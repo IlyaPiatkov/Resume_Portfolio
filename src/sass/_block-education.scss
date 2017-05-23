@@ -1,0 +1,83 @@
+.block-education {
+	width: 320px;
+	margin: 0 auto;
+}
+.block-education h2 {
+	@include line-decoration;
+	position: relative;
+	font-size: $title-size;
+}
+.block-education__wrapper {
+	@include clearfix;
+	padding: 50px 10px;
+	border-bottom: 1px solid #e0e0e0;
+}
+.block-education__skate{
+	float: left;
+	position: relative;
+	width: 75%;
+	margin-top: 50px;
+	padding: 15px;
+	border-radius: 10px;
+	background: $background-page;
+	color: $color-light;
+}
+.block-education__skate h3 {
+	margin: 0;
+	font-size: $skate-size-h3;
+}
+.block-education__skate time {
+	font-size: $skate-size-time;
+	color: $color-time;
+}
+.block-education__skate p {
+	margin: 0;
+	font-size: $skate-size-p;
+}
+.block-education__skate::after {
+	content: "";
+	position: absolute;
+	top: 5px;
+	right: -3px;
+	border: 20px solid $background-page;
+    border-right-width: 0;
+    border-left-color: $background-page;
+    border-top-color: transparent;
+    transform: rotate(90deg);
+    z-index: -1;
+}
+.block-education__skate:last-child::after {
+	top: 120px;
+	transform: rotate(135deg);
+}
+.block-education__indicator {
+	float: right;
+	position: relative;
+	margin: 50px 15px 0 0;
+	height: 340px;
+	width: 1px;
+	background: $background-page;
+}
+.block-education__indicator--circle {
+	position: absolute;
+	left: -15px;
+	width: 26px;
+	height: 26px;
+	border: 2px solid $background-page;
+	border-radius: 50%;
+	background: $color-light;
+}
+.block-education__indicator--circle::after {
+	content: "";
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 12px;
+	height: 12px;
+	border-radius: 50px;
+	border: 2px solid $background-page;
+	background: #914b57;
+}
+.block-education__indicator--2 {
+	top: 310px;
+}

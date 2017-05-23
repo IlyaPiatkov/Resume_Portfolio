@@ -1,0 +1,17 @@
+.form-feedback {
+	
+}
+.form-feedback__title {
+	font-size: $footer-title;
+}
+.form-feedback input {
+	margin-top: 20px;
+	padding-left: 10px;
+	width: 100%;
+	
+}
+.form-feedback textarea {
+	margin-top: 20px;
+	max-width: 308px;
+	min-width: 308px;
+}

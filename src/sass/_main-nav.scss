@@ -1,0 +1,28 @@
+.main-nav {
+	width: 320px;
+	margin: 0 auto;
+}
+.main-nav__list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.main-nav__list li {
+	border-bottom: 1px solid #282835;
+	padding: 20px 30px;
+	background: $background-page;
+	color: $color-light;
+}
+li.main-nav__list--style{
+	background: $background-logo;
+}
+.main-nav__title {
+	margin: 0;
+	padding-top: 134px;
+	font-size: $title-size;
+	color: $color-light;
+}
+.main-nav__list a {
+	text-decoration: none;
+	color: $color-light;
+}

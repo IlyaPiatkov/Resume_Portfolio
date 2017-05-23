@@ -1,0 +1,13 @@
+
+.test {
+	width: 100%;
+	min-height: 100px;
+	border: 1px solid black;
+	@media #{$tablet-widths} {
+		border: 2px solid red;
+		@media #{$desktop-widths} {
+			border: 5px solid yellow;
+		}
+	}
+
+}

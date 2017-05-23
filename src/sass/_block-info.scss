@@ -1,0 +1,23 @@
+.block-info {
+	width: 320px;
+	margin: 0 auto;
+}
+.block-info__wrapper {
+	padding: 50px 10px;
+	border-bottom: 1px solid #e0e0e0;
+}
+.block-info h2 {
+	@include line-decoration;
+	position: relative;
+	font-size: $title-size;
+}
+.block-info__list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.block-info__list li {
+	border-bottom: 1px solid #e0e0e0;
+	padding: 10px 0;
+	font-size: $block-info-li;
+}

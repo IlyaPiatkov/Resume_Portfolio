@@ -1,0 +1,11 @@
+.page-header {
+	min-height: 220px;
+	background: $background-page;
+}
+.page-header__logo {
+	height: 80px;
+	background-image: $background-logo;
+}
+@media #{$tablet-widths} {
+	
+}

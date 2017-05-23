@@ -1,0 +1,52 @@
+.block-skills {
+	width: 320px;
+	margin: 0 auto;
+	background: $background-skills;
+	color: $color-light
+}
+.block-skills h2 {
+	@include line-decoration;
+	position: relative;
+	font-size: $title-size;
+}
+.block-skills__wrapper {
+	padding: 50px 10px;
+}
+.block-skills__list {
+	margin: 0;
+	margin-top: 50px;
+	padding: 0;
+	list-style: none;
+}
+.block-skills__name {
+	margin-top: 20px;
+}
+.block-skills-indicator {
+	float: left;
+	position: relative;
+	margin-top: 10px;
+	width: 235px;
+	height: 4px;
+	background: $background-indicator-line;
+}
+.block-skills__items {
+	float: right;
+	margin-right: 10px;
+}
+.block-skills-indicator::after {
+	content: "";
+	display: table;
+	width: 205px;
+	height: 4px;
+	background: $background-indicator;
+}
+.block-skills-indicator::before {
+	content: "";
+	position: absolute;
+	top: -7px;
+	left: 205px;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	background: $background-indicator;
+}

@@ -7,13 +7,157 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="theme-color" content="#fff">
     <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/normalize.css">
     <link rel="stylesheet" media="all" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kumar+One" rel="stylesheet">
   </head>
   <body>
-    <header class="header">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab earum labore pariatur perspiciatis quidem reiciendis vel. Consectetur eaque, impedit. A at dolorum eaque facilis magni necessitatibus neque, nesciunt nulla repellendus.
+    <header class="page-header">
+    	<div class="page-header__logo">
+    		
+    	</div>    	
     </header>
-    <div class="test">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, aperiam architecto corporis deserunt exercitationem expedita facere fuga iusto modi molestiae mollitia officiis, possimus, quaerat repudiandae sapiente soluta tempore veritatis vitae.</div>
-    <div class="big">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit labore maxime neque, nostrum saepe vel vero. Accusantium at ex, excepturi iste magni, mollitia nemo obcaecati officiis qui repellat tempore voluptatem.</div>
+    <nav class="main-nav">
+    	<div class="main-nav__wrapper">
+    		<ul class="main-nav__list">  	
+    			<li class="main-nav__list--style"><h1 class="main-nav__title">Ілля Пятков Верстальщик</h1></li>	
+    			<li>Головна</li>
+    			<li><a href="#about-me">Про мене</li>
+    			<li><a href="#education">Освіта</a></li>
+    			<li><a href="#work">Досвід роботи</a></li>
+    			<li><a href="#skills">Навики</a></li>
+    			<li>Портфоліо</li>
+    			<li>Контакти</li>
+    		</ul>
+    	</div>
+    </nav>
+    <main>
+    	<section class="block-info">
+    		<div class="block-info__wrapper">
+    			<h2><a name="about-me">Про мене</a></h2>
+    			<p>Привіт! Я молодий спеціаліст в сфері ІТ-технологіях, пройшов курс htmlacademy.ru. Ніколи не думав що верстать сторінти так легко. Все розпочалося коли я відкрив блокнот і написав пару тегов і сталася "магія"
+браузер відкрив мій шедевр, тоді я зрозумів, що це моє.</p>
+				<figure class="block-info__avatar">
+					<img src="img/IMG_20161003_193255.jpg" width="100%" alt="Моє фото">
+				</figure>
+				<ul class="block-info__list">
+					<li>Ім'я: Ілля Пятков</li>
+					<li>Вік: 27 років</li>
+					<li>Email: capok33@gmail.com</li>
+					<li>@45453</li>
+					<li>Адсеса: м. Черкаси</li>
+				</ul>
+    		</div>
+    	</section>
+    	<section class="block-education">
+    		<div class="block-education__wrapper">
+    			<h2><a name="education">Освіта</a></h2>
+    			<div class="block-education__indicator">
+    				<div class="block-education__indicator--circle block-education__indicator--1"></div>
+    				<div class="block-education__indicator--circle block-education__indicator--2"></div>
+    			</div>
+    			<div class="block-education__skate">
+    				<h3>Звенигородська школа ім. Т.Шевченка</h3>
+    				<time>06.2007</time>
+    				<p>Звичайна загальноосвітня школа</p>
+    			</div>
+    			<div class="block-education__skate">
+    				<h3>Черкаський Державний Технологічний Университет</h3>
+    				<time>06.2012</time>
+    				<p>Кафедра "Комп’ютерних наук та інформаційних технологій управління"</p>
+    			</div>
+    		</div>
+    	</section>
+    	<section class="block-work">
+    		<div class="block-work__wrapper">
+    			<h2><a name="work">Досвід роботи</a></h2>
+    			<div class="block-work__indicator">
+    				<div class="block-work__indicator--circle block-work__indicator--1"></div>
+    				<div class="block-work__indicator--circle block-work__indicator--2"></div>
+    				<div class="block-work__indicator--circle block-work__indicator--3"></div>
+    				<div class="block-work__indicator--circle block-work__indicator--4"></div>
+    				<div class="block-work__indicator--circle block-work__indicator--5"></div>
+    			</div>
+    			<div class="block-work__skate">
+    				<h3>Альтес(ВОЛЯ) Технік</h3>
+    				<time>06.2011-11.2011</time>
+    				<p>Обов'язки: Прокладка кабеля, налаштування роутера та абонентського обладнання.</p>
+    			</div>
+    			<div class="block-work__skate">
+    				<h3>ProNet Технік</h3>
+    				<time>07.12-08.2013</time>
+    				<p>Обов'язки: Прокладка кабеля, налаштування роутера, сигналізації, відекамер.</p>
+    			</div>
+    			<div class="block-work__skate">
+    				<h3>Arka Інженер-конструктор</h3>
+    				<time>08.13-10.2014</time>
+    				<p>Обов'язки: Оформлення документів для тендерів, створення макетів.</p>
+    			</div>
+    			<div class="block-work__skate">
+    				<h3>Сільпо Продавець</h3>
+    				<time>10.14-03.2015</time>
+    				<p>Обов'язки: Розкладка товару.</p>
+    			</div>
+    			<div class="block-work__skate">
+    				<h3>КОЄ Менеджер із збуту</h3>
+    				<time>03.2015-...</time>
+    				<p>Обов'язки: Продаж товару.</p>
+    			</div>	
+    		</div>
+    	</section>
+    	<section class="block-skills">
+    		<div class="block-skills__wrapper">
+    			<h2><a name="skills">Навики</a></h2>
+    			<ul class="block-skills__list">
+    				<li>
+    					<div class="block-skills__name">HTML5</div>
+    					<div class="block-skills-indicator"></div>
+    					<div class="block-skills__items">90%</div>
+    				</li>
+    				<li>
+    					<div class="block-skills__name">CSS3</div>
+    					<div class="block-skills-indicator"></div>
+    					<div class="block-skills__items">90%</div>
+    				</li>
+    				<li>
+    					<div class="block-skills__name">SASS</div>
+    					<div class="block-skills-indicator"></div>
+    					<div class="block-skills__items">90%</div>
+    				</li>
+    			</ul>
+    			<ul class="block-skills__list">
+    				<li>
+    					<div class="block-skills__name">HTML5</div>
+    					<div class="block-skills-indicator"></div>
+    					<div class="block-skills__items">90%</div>
+    				</li>
+    				<li>
+    					<div class="block-skills__name">CSS3</div>
+    					<div class="block-skills-indicator"></div>
+    					<div class="block-skills__items">90%</div>
+    				</li>
+    				<li>
+    					<div class="block-skills__name">SASS</div>
+    					<div class="block-skills-indicator"></div>
+    					<div class="block-skills__items">90%</div>
+    				</li>
+    			</ul>
+    		</div>
+    	</section>
+    </main>
+    <footer class="pege-footer">
+    	<div class="footer-wrapper">
+    		<form class="form-feedback" action="#" method="post">
+    			<span class="form-feedback__title">Залишити повідомлення</span>
+    			<input type="text" name="name" placeholder="Ім'я">
+    			<input type="email" name="email" placeholder="Email">
+    			<textarea placeholder="Повідомлення">
+    				
+    			</textarea>
+    		</form>
+    	</div>
+    	
+    </footer>
   </body>
 </html>
