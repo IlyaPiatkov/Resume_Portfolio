@@ -1,5 +1,5 @@
 .form-feedback {
-	
+	@include clearfix;
 }
 .form-feedback__title {
 	font-size: $footer-title;
@@ -7,11 +7,17 @@
 .form-feedback input {
 	margin-top: 20px;
 	padding-left: 10px;
-	width: 100%;
+	width: 95%;
 	
 }
 .form-feedback textarea {
 	margin-top: 20px;
-	max-width: 308px;
-	min-width: 308px;
+	padding: 0 10px;
+	max-width: 278px;
+	min-width: 278px;
+	min-height: 100px;
+}
+.form-feedback__btn--style {
+	float: right;
+	margin-top: 15px;
 }

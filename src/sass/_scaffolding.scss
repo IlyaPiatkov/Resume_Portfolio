@@ -3,3 +3,11 @@ body {
 	line-height: 23px;
 	font-family: 'Roboto Slab', serif;
 }
+.btn {
+	font-size: $btn-size;
+	padding: 5px 10px;
+	border: none;
+	color: $color-light;
+	background: $backgroung-btn;
+	cursor: pointer;
+}

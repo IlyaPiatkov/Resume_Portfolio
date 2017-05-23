@@ -1,6 +1,4 @@
 .block-skills {
-	width: 320px;
-	margin: 0 auto;
 	background: $background-skills;
 	color: $color-light
 }
@@ -10,6 +8,8 @@
 	font-size: $title-size;
 }
 .block-skills__wrapper {
+	width: 320px;
+	margin: 0 auto;
 	padding: 50px 10px;
 }
 .block-skills__list {
