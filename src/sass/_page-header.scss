@@ -1,11 +1,12 @@
 .page-header {
-	min-height: 220px;
+	width: 100%;
 	background: $background-page;
 }
-.page-header__logo {
-	height: 80px;
-	background-image: $background-logo;
-}
 @media #{$tablet-widths} {
-	
+	.page-header {
+	min-height: 590px;
+	}
+	.main-nav__container-title {
+		border: none;
+	}
 }
