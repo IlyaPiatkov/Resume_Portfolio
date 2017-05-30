@@ -10,3 +10,8 @@
 		border: none;
 	}
 }
+@media #{$desktop-widths} {
+	.page-header {
+	min-height: 300px;
+	}
+}
