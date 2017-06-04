@@ -8,8 +8,7 @@
 	font-size: $title-size;
 }
 .block-skills__wrapper {
-	width: 320px;
-	margin: 0 auto;
+	@include container-fluid;
 	padding: 50px 10px;
 }
 .block-skills__list {

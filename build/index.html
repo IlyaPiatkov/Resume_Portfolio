@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Template</title>
+    <title>Резюме Пятков Ілля</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="theme-color" content="#fff">
@@ -18,7 +18,7 @@
             <h1>Ілля Пятков</h1>
             <span>#Верстальщик</span>
         </div>   	
-        <nav class="main-nav main-nav--closed">
+        <nav class="main-nav main-nav--closed main-nav--nojs">
             <button class="main-nav__toggle" type="button">Відкрити меню</button>
         	<div class="main-nav__wrapper">
         		<ul class="main-nav__list">  		
@@ -37,7 +37,7 @@
     	<section class="block-info">
     		<div class="block-info__wrapper">
     			<h2><a name="about-me">Про мене</a></h2>
-    			<p>Привіт! Я молодий спеціаліст в сфері ІТ-технологіях, пройшов курс htmlacademy.ru. Ніколи не думав що верстать сторінти так легко. Все розпочалося коли я відкрив блокнот і написав пару тегов і сталася "магія"
+    			<p>Привіт! Я молодий спеціаліст в сфері ІТ-технологіях, пройшов курс htmlacademy.ru. Ніколи не думав що верстать сторінти так легко. Все розпочалося коли я відкрив блокнот і написав пару тегів і сталася "магія"
 браузер відкрив мій шедевр, тоді я зрозумів, що це моє.</p>
 				<figure class="block-info__avatar">
 					<img src="img/IMG_20161003_193255.jpg" width="100%" alt="Моє фото">
@@ -54,20 +54,21 @@
     	<section class="block-education">
     		<div class="block-education__wrapper">
     			<h2><a name="education">Освіта</a></h2>
-    			<div class="block-education__indicator">
-    				<div class="block-education__indicator--circle block-education__indicator--1"></div>
-    				<div class="block-education__indicator--circle block-education__indicator--2"></div>
-    			</div>
-    			<div class="block-education__skate">
-    				<h3>Звенигородська школа ім. Т.Шевченка</h3>
-    				<time>06.2007</time>
-    				<p>Звичайна загальноосвітня школа</p>
-    			</div>
-    			<div class="block-education__skate">
-    				<h3>Черкаський Державний Технологічний Университет</h3>
-    				<time>06.2012</time>
-    				<p>Кафедра "Комп’ютерних наук та інформаційних технологій управління"</p>
-    			</div>
+                 <div class="block-education__indicator">
+                    <div class="block-education__indicator--1"></div>
+                     <div class="block-education__indicator--circle block-education__indicator--2"></div>
+                </div>
+                <div class="block-education__skate">
+                    <div class="block-education__indicator--circle block-education__indicator--1"></div>
+                    <h3>Звенигородська школа ім. Т.Шевченка</h3>
+                    <time>06.2007</time>
+                    <p>Звичайна загальноосвітня школа</p>
+                    </div>
+                <div class="block-education__skate">
+                    <h3>Черкаський Державний Технологічний Университет</h3>
+                    <time>06.2012</time>
+                    <p>Кафедра "Комп’ютерних наук та інформаційних технологій управління"</p>
+                </div>   
     		</div>
     	</section>
     	<section class="block-work">
@@ -180,5 +181,21 @@
             </div>
     	</div>	
     </footer>
+    <script type="text/javascript">
+        var MainNav = document.querySelector('.main-nav');
+        var MainNavToggle = document.querySelector('.main-nav__toggle');
+
+        MainNav.classList.remove('main-nav--nojs');
+        MainNavToggle.addEventListener('click', function() {
+            if (MainNav.classList.contains('main-nav--closed')) {
+                MainNav.classList.remove('main-nav--closed');
+                MainNav.classList.add('main-nav--opened');
+            }
+            else {
+                MainNav.classList.add('main-nav--closed');
+                MainNav.classList.remove('main-nav--opened');
+            }
+        });
+    </script>
   </body>
 </html>

@@ -1,6 +1,7 @@
 .main-nav {
 	position: relative;
 	margin-top: 20px;
+	min-height: 65px;
 	background: $background-main-menu;	
 }
 .main-nav__toggle {
@@ -46,6 +47,8 @@
 	top: 0;
 	left: 0;
 	right: auto;
+	height: 65px;
+	border-top: 1px solid #282835;
 	&::before,
 	&::after {
 		content: "";
@@ -71,7 +74,6 @@
 }
 .main-nav__wrapper {
 	min-width: 270px;
-	max-width: 768px;
 }
 .main-nav__list {
 	margin: 0;
@@ -105,22 +107,94 @@
 	text-decoration: none;
 	color: $color-light;
 }
+.main-nav--closed .main-nav__item {
+	display: none;
+	&--active {
+		display: block;
+		text-align: center;
+	}
+}
+.main-nav--opened .main-nav__wrapper {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 90px;
+	z-index: 10;
+	background: $background-main-menu;
+}
+.main-nav--nojs .main-nav__toggle {
+	display: none;
+}
+.main-nav--nojs .main-nav__wrapeer {
+	position: static;
+	height: auto;
+}
+.main-nav--nojs .main-nav__item {
+	display: block;
+	&--active {
+		text-align: left;
+	}
+}
 
 @media #{$tablet-widths} {
 	.main-nav {
 		order: 0;
+		background: none;
+	}
+	.main-nav__wrapper {
+
 	}
 	.main-nav__list {
 		display: flex;
 		justify-content: center;
-
 	}
 	.main-nav__list a {
 		border: none;
-		padding: 20px 3%;
+		padding: 20px;
+		font-weight: normal;
+		text-align: center;
+	}
+	.main-nav__item {
+		
 	}
 	.main-nav__list li:first-child a {
 		border: none;
 	}
+	.main-nav--closed .main-nav__toggle{
+		margin-top: -20px;
+		left: 0;
+		top: 0;
+		background: none;
+	}
+	.main-nav--closed .main-nav__item {
+		&--active {
+			display: none;
+		}
+	}
+	.main-nav--opened .main-nav__wrapper {
+		background: none;
 
+	}
+	.main-nav--opened .main-nav__item {
+		margin-top: -20px;
+		&--active {
+			display: none;
+		}
+	}
+	.main-nav--opened .main-nav__toggle {
+		margin-top: -20px;
+		background: none;
+	}
+	.main-nav--opened .main-nav__item {
+		&:nth-child(2n) a {
+			animation-name: main-nav_translateY2;
+			animation-duration: 2s;
+			animation-timing-function: ease-out;
+		}
+		&:nth-child(2n+1) a {
+			animation-name: main-nav_translateY2;
+			animation-duration: 1.8s;
+			animation-timing-function: ease-out;
+		}
+	}
 }

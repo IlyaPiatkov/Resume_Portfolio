@@ -1,8 +1,8 @@
 .pege-footer {
-	width: 320px;
-	margin: 0 auto;
+
 }
 .footer-wrapper {
+	@include container-fluid;
 	padding: 50px 10px 20px;
 }
 .pege-footer__info {

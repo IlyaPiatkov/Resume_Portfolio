@@ -1,9 +1,5 @@
-.block-info {
-
-}
 .block-info__wrapper {
-	min-width: 250px;
-	max-width: 768px;
+	@include container-fluid;
 	padding: 50px 3%;
 	border-bottom: 1px solid #e0e0e0;
 }
@@ -21,4 +17,28 @@
 	border-bottom: 1px solid #e0e0e0;
 	padding: 10px 0;
 	font-size: $block-info-li;
+}
+@media #{$tablet-widths} {
+	.block-info__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+	}
+	.block-info h2 {
+		display: block;
+		width: 100%;
+	}
+	.block-info figure {
+		margin: 0;
+		width: 45%;
+		margin-left: auto;
+		order: 1;	
+	}
+	.block-info figure img{
+		border-radius: 50%;
+	}
+	.block-info__list {
+		width: 50%;
+		align-self: center;
+	}
 }

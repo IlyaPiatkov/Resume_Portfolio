@@ -1,6 +1,4 @@
 .block-work {
-	width: 320px;
-	margin: 0 auto;
 }
 .block-work h2 {
 	@include line-decoration;
@@ -8,6 +6,7 @@
 	font-size: $title-size;
 }
 .block-work__wrapper {
+	@include container-fluid;
 	@include clearfix;
 	padding: 50px 10px;
 	border-bottom: 1px solid #e0e0e0;
