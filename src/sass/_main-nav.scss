@@ -1,15 +1,10 @@
 .main-nav {
 	position: relative;
 	margin-top: 20px;
-	min-height: 65px;
-	background: $background-main-menu;	
+	min-height: 68px;
+	background: $background-main-menu;
+
 }
-// vars
-$color: #fff;         // icon color
-$animation: 0.6s;   // animation speed
-$scale: 0.8;            // icon scale 68/68 default
-
-
 // spacing + background-color
 
 .hamburglar {
@@ -22,6 +17,7 @@ $scale: 0.8;            // icon scale 68/68 default
   height: 68px;
   -webkit-touch-callout: none;
     user-select: none;
+  z-index: 30;
 }
 
 // transition mask
@@ -57,7 +53,7 @@ $scale: 0.8;            // icon scale 68/68 default
     width: 30px;
     height: 34px;
     margin: 0 4px 0 0;
-
+	background: $color;
   }
 }
 
@@ -90,7 +86,7 @@ $scale: 0.8;            // icon scale 68/68 default
 // dasharray is the dash size
 // need to be able to control dash space size.
 
-.hamburglar.is-open {
+.main-nav--opened .hamburglar {
   .path {
     animation: dash-in $animation linear normal;
     animation-fill-mode:forwards;
@@ -101,7 +97,7 @@ $scale: 0.8;            // icon scale 68/68 default
   }
 }
 
-.hamburglar.is-closed {
+.main-nav--closed-animation .hamburglar {
   .path {
     animation: dash-out $animation linear normal;
     animation-fill-mode:forwards;
@@ -147,9 +143,9 @@ $scale: 0.8;            // icon scale 68/68 default
 
 .burger-icon {
   position: absolute;
-  padding: 20px 16px;
+  padding: 20px 0px 20px 16px;
   height: 68px;
-  width: 68px;
+  width: 64px;
 }
 
 .burger-container {
@@ -206,7 +202,7 @@ $scale: 0.8;            // icon scale 68/68 default
 
 
 // bun animations 
-.hamburglar.is-open {
+.main-nav--opened .hamburglar {
   .burger-bun-top {
     animation: bun-top-out $animation linear normal;
     animation-fill-mode:forwards;
@@ -216,7 +212,7 @@ $scale: 0.8;            // icon scale 68/68 default
     animation-fill-mode:forwards;
   }
 }
-.hamburglar.is-closed {
+.main-nav--closed-animation .hamburglar {
   .burger-bun-top {
     animation: bun-top-in $animation linear normal;
     animation-fill-mode:forwards;
@@ -316,20 +312,39 @@ $scale: 0.8;            // icon scale 68/68 default
 
 
 // burger filling
-.hamburglar.is-open {
+.main-nav--opened .hamburglar {
   .burger-filling {
     animation: burger-fill-out $animation linear normal;
     animation-fill-mode:forwards;
   }
+  animation: hamburglar-run-left $animation linear normal;
 }
 
-.hamburglar.is-closed {
+.main-nav--closed-animation .hamburglar {
   .burger-filling {
     animation: burger-fill-in $animation linear normal;
     animation-fill-mode:forwards;
-  }
+  } 
 }
-
+.main-nav--closed-animation .hamburglar{
+	animation: hamburglar-run-right $animation linear normal;
+}
+@keyframes hamburglar-run-right {
+	0% {
+		transform: translate(-90vw) scale($scale);
+	}
+	100% {
+		transform: translate(0vw) scale($scale);
+	}
+}
+@keyframes hamburglar-run-left {
+	0% {
+		transform: translate(90vw) scale($scale);
+	}
+	100% {
+		transform: translate(0vw) scale($scale);
+	}
+}
 @keyframes burger-fill-in {
   0% {
     width: 0;
@@ -369,75 +384,11 @@ $scale: 0.8;            // icon scale 68/68 default
     left: 36px;
   }
 }
-/*.main-nav__toggle {
-	position: absolute;
-	top: 1px;
-	right: 0;
-	display: block;
-	width: 90px;
-	height: 63px;
-	font-size: 0;
-	background: $background-main-nav__toggle;
-	border: none;
-	cursor: pointer;
-	z-index: 2;
-	&:hover {
-		background: $background-main-nav__toggle-hover;
-	}
-	&:active {
-		background: $background-main-nav__toggle-active;
-	}
-	&:focus {
-		outline-color: transparent;
-	}
-
-}
-.main-nav--closed .main-nav__toggle::before {
-	content: "";
-	position: absolute;
-	top: 18px;
-	left: 17px;
-	width: 55px;
-	height: 3px;
-	background: #ffffff;
-	box-shadow: 0 13px 0 0 #ffffff,
-				0 26px 0 0 #ffffff; 
-}
-.main-nav--closed .main-nav__toggle:active::before {
-	background: rgba(255, 255, 255, 0.3);
-	box-shadow: 0 13px 0 0 rgba(255, 255, 255, 0.3),
-				0 26px 0 0 rgba(255, 255, 255, 0.3); 
-}
-.main-nav--opened .main-nav__toggle {
+.main-nav--opened .hamburglar {
 	top: 0;
 	left: 0;
-	right: auto;
-	height: 65px;
-	border-top: 1px solid #282835;
-	&::before,
-	&::after {
-		content: "";
-		position: absolute;
-		top: 30px;
-		left: 18px;
-		width: 55px;
-		height: 3px;
-		background: #ffffff;
-	}
-	&::before {
-		transform: rotate(45deg);
-		box-shadow: none;
-	}
-	&::after {
-		transform: rotate(-45deg);
-	}
-	&:active::before,
-	&:active::after {
-		background: rgba(255, 255, 255, 0.3);
-		box-shadow: none;
-	}
+	right: auto;	
 }
-*/
 .main-nav__wrapper {
 	min-width: 270px;
 }
@@ -457,9 +408,6 @@ $scale: 0.8;            // icon scale 68/68 default
 	text-transform: uppercase;
 	color: $color-light;
 }
-.main-nav__item:first-child a{
-	border-top: 1px solid #282835;
-}
 .main-nav__item a[href] {
 	&:hover {
 		background: $background-main-nav__a--hover;
@@ -473,22 +421,48 @@ $scale: 0.8;            // icon scale 68/68 default
 	text-decoration: none;
 	color: $color-light;
 }
-/*.main-nav--closed .main-nav__item {
+.main-nav--closed .main-nav__item {
 	display: none;
 	&--active {
 		display: block;
 		text-align: center;
 	}
 }
+.main-nav--closed-animation .main-nav__item {
+	animation: main-nav-closed $animation linear normal;	
+}
+@keyframes main-nav-closed {
+	0% {
+		opacity: 1;
+	}
+	30% {
+		opacity: 0;
+	}
+	70% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
 .main-nav--opened .main-nav__wrapper {
 	position: absolute;
 	top: 0;
 	right: 0;
-	left: 90px;
+	left: 70px;
 	z-index: 10;
 	background: $background-main-menu;
-}*/
-.main-nav--nojs .main-nav__toggle {
+	animation: main-nav-opened $animation linear normal;
+}
+@keyframes main-nav-opened {
+	0% {
+		transform: translate(100vw);
+	}
+	100% {
+		transform: translate(0vw);
+	}
+}
+.main-nav--nojs .hamburglar {
 	display: none;
 }
 .main-nav--nojs .main-nav__wrapeer {

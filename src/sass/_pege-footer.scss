@@ -3,12 +3,21 @@
 }
 .footer-wrapper {
 	@include container-fluid;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
 	padding: 50px 10px 20px;
 }
+.pege-footer h2 {
+	@include line-decoration;
+	position: relative;
+	display: inline-block;
+	width: 100%;
+}
 .pege-footer__info {
-	margin-top: 40px;
-	padding-bottom: 40px; 
-	border-bottom: 1px solid #e0e0e0;
+	max-width: 450px;
+	margin: 30px auto;
 }
 .pege-footer__list {
 	margin: 0;
@@ -49,12 +58,16 @@
 	height: 32px;
 }
 .pege-footer__copyright {
-	margin-left: 100px;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	border-top: 1px solid #e0e0e0;
 }
 .pege-footer__copyright div{
 	display: inline-block;
-	margin-top: 20px;
-	padding-left: 20px;
+	margin: 20px 3%;
+	width: 18px;
+	height: 18px;
 }
 .pege-footer__copyright a {
 	font-size: 0px;
