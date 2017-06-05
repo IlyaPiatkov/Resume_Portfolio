@@ -19,13 +19,42 @@
             <span>#Верстальщик</span>
         </div>   	
         <nav class="main-nav main-nav--closed main-nav--nojs">
-            <button class="main-nav__toggle" type="button">Відкрити меню</button>
+            <!--<button class="main-nav__toggle" type="button">Відкрити меню</button-->
+            <div id="hamburger" class="hamburglar  is-closed">
+
+                <div class="burger-icon">
+                  <div class="burger-container">
+                    <span class="burger-bun-top"></span>
+                    <span class="burger-filling"></span>
+                    <span class="burger-bun-bot"></span>
+                  </div>
+                </div>
+                
+                <!-- svg ring containter -->
+                <div class="burger-ring">
+                  <svg class="svg-ring">
+                      <path class="path" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4" d="M 34 2 C 16.3 2 2 16.3 2 34 s 14.3 32 32 32 s 32 -14.3 32 -32 S 51.7 2 34 2" />
+                  </svg>
+                </div>
+                <!-- the masked path that animates the fill to the ring -->
+                
+                    <svg width="0" height="0">
+                   <mask id="mask">
+                <path xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#ff0000" stroke-miterlimit="10" stroke-width="4" d="M 34 2 c 11.6 0 21.8 6.2 27.4 15.5 c 2.9 4.8 5 16.5 -9.4 16.5 h -4" />
+                   </mask>
+                 </svg>
+                <div class="path-burger">
+                  <div class="animate-path">
+                    <div class="path-rotation"></div>
+                  </div>
+                </div>
+                  
+              </div>
         	<div class="main-nav__wrapper">
         		<ul class="main-nav__list">  		
         			<li class="main-nav__item main-nav__item--active"><a>Головна</a></li>
         			<li class="main-nav__item"><a href="#about-me">Про мене</a></li>
         			<li class="main-nav__item"><a href="#education">Освіта</a></li>
-        			<li class="main-nav__item"><a href="#work">Досвід роботи</a></li>
         			<li class="main-nav__item"><a href="#skills">Навики</a></li>
         			<li class="main-nav__item"><a href="#">Портфоліо</a></li>
         			<li class="main-nav__item"><a href="#contact">Контакти</a></li>
@@ -53,59 +82,15 @@
     	</section>
     	<section class="block-education">
     		<div class="block-education__wrapper">
-    			<h2><a name="education">Освіта</a></h2>
-                 <div class="block-education__indicator">
-                    <div class="block-education__indicator--1"></div>
-                     <div class="block-education__indicator--circle block-education__indicator--2"></div>
+                <div class="block-education__card--wrapper">
+                    <h2><a name="education">Освіта</a></h2>
+                    <p>В 2011 році закінчив навчання на кафедрі компютерні технології Черкаського державного технологічного університету, отримав ступінь бакалавра."</p>
+                    <p>В 2012 році я отримав в ЧДТУ диплом спеціаліста за спеціальністю "Інформаційні управляючі системи та технології"</p>
                 </div>
-                <div class="block-education__skate">
-                    <div class="block-education__indicator--circle block-education__indicator--1"></div>
-                    <h3>Звенигородська школа ім. Т.Шевченка</h3>
-                    <time>06.2007</time>
-                    <p>Звичайна загальноосвітня школа</p>
-                    </div>
-                <div class="block-education__skate">
-                    <h3>Черкаський Державний Технологічний Университет</h3>
-                    <time>06.2012</time>
-                    <p>Кафедра "Комп’ютерних наук та інформаційних технологій управління"</p>
-                </div>   
-    		</div>
-    	</section>
-    	<section class="block-work">
-    		<div class="block-work__wrapper">
-    			<h2><a name="work">Досвід роботи</a></h2>
-    			<div class="block-work__indicator">
-    				<div class="block-work__indicator--circle block-work__indicator--1"></div>
-    				<div class="block-work__indicator--circle block-work__indicator--2"></div>
-    				<div class="block-work__indicator--circle block-work__indicator--3"></div>
-    				<div class="block-work__indicator--circle block-work__indicator--4"></div>
-    				<div class="block-work__indicator--circle block-work__indicator--5"></div>
-    			</div>
-    			<div class="block-work__skate">
-    				<h3>Альтес(ВОЛЯ) Технік</h3>
-    				<time>06.2011-11.2011</time>
-    				<p>Обов'язки: Прокладка кабеля, налаштування роутера та абонентського обладнання.</p>
-    			</div>
-    			<div class="block-work__skate">
-    				<h3>ProNet Технік</h3>
-    				<time>07.12-08.2013</time>
-    				<p>Обов'язки: Прокладка кабеля, налаштування роутера, сигналізації, відекамер.</p>
-    			</div>
-    			<div class="block-work__skate">
-    				<h3>Arka Інженер-конструктор</h3>
-    				<time>08.13-10.2014</time>
-    				<p>Обов'язки: Оформлення документів для тендерів, створення макетів.</p>
-    			</div>
-    			<div class="block-work__skate">
-    				<h3>Сільпо Продавець</h3>
-    				<time>10.14-03.2015</time>
-    				<p>Обов'язки: Розкладка товару.</p>
-    			</div>
-    			<div class="block-work__skate">
-    				<h3>КОЄ Менеджер із збуту</h3>
-    				<time>03.2015-...</time>
-    				<p>Обов'язки: Продаж товару.</p>
-    			</div>	
+                <div class="block-education__card--wrapper">
+                    <h2 class="block-education__additional">Додаткове навчання</h2>
+                    <p>В 2017 році пройшов курс "Продвинутий інтенсив HTML Akademy". В процесі навчання на інтенсиві я активно використовував ті інструменти, якими повинен володіти кожен верстальник-професіонал: препроцесори, GitHub, методології верстки, засоби автоматизації. Отримані знання дозволили мені краще оцінювати складність завдань і істотно підвищити ефективність своєї роботи.</p>  
+                </div> 
     		</div>
     	</section>
     	<section class="block-skills">
@@ -182,20 +167,43 @@
     	</div>	
     </footer>
     <script type="text/javascript">
-        var MainNav = document.querySelector('.main-nav');
-        var MainNavToggle = document.querySelector('.main-nav__toggle');
+        //var MainNav = document.querySelector('.main-nav');
+        //var MainNavToggle = document.querySelector('.main-nav__toggle');
 
-        MainNav.classList.remove('main-nav--nojs');
-        MainNavToggle.addEventListener('click', function() {
-            if (MainNav.classList.contains('main-nav--closed')) {
-                MainNav.classList.remove('main-nav--closed');
-                MainNav.classList.add('main-nav--opened');
-            }
-            else {
-                MainNav.classList.add('main-nav--closed');
-                MainNav.classList.remove('main-nav--opened');
-            }
-        });
+        //MainNav.classList.remove('main-nav--nojs');
+        //MainNavToggle.addEventListener('click', function() {
+        //    if (MainNav.classList.contains('main-nav--closed')) {
+        //        MainNav.classList.remove('main-nav--closed');
+        //        MainNav.classList.add('main-nav--opened');
+        //    }
+        //    else {
+        //        MainNav.classList.add('main-nav--closed');
+        //        MainNav.classList.remove('main-nav--opened');
+        //    }
+        //});
+
+
+        $('document').ready(function () {
+    var trigger = $('#hamburger'),
+        isClosed = true;
+
+    trigger.click(function () {
+      burgerTime();
+    });
+
+    function burgerTime() {
+      if (isClosed == true) {
+        trigger.removeClass('is-open');
+        trigger.addClass('is-closed');
+        isClosed = false;
+      } else {
+        trigger.removeClass('is-closed');
+        trigger.addClass('is-open');
+        isClosed = true;
+      }
+    }
+
+  });
     </script>
   </body>
 </html>
