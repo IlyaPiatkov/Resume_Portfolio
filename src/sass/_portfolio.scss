@@ -1,0 +1,80 @@
+.project__wrapper {
+	@include container-fluid;
+	padding: $padding-top-block $padding-l-r-block 0;
+}
+.project h2 {
+	@include line-decoration;
+	position: relative;
+}
+.project__cite--wrapper {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-top: 30px;
+}
+.project__cite--title {
+	width: 100%;
+	color: #757575;
+}
+.project__img--wrapper {
+	max-width: 450px;
+	margin: auto;
+	margin-top: 30px;
+}
+.project__info {
+	margin-top: 30px;
+}
+.project__technology {
+	margin-top: 30px;
+	width: 100%;
+}
+.project__technology span{
+	padding: 5px 10px;
+	margin: 0 10px 10px 0;
+	background: #238e86;
+	color: #ffffff;
+}
+.project__link-cite {
+	margin-top: 40px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 16px;
+	color: rgba(0, 0, 0, 0.54);
+	box-shadow: 0 2px 0 0 $backgroung-btn;
+	&:hover {
+		color: rgba(0, 0, 0, 1);
+		box-shadow: 0 2px 0 0 $backgroung-btn,
+					0 3px 0 0 $backgroung-btn;
+	}
+	&:active {
+		color: rgba(0, 0, 0, 0.3);
+	}
+}
+@media #{$tablet-widths} {
+	.project__cite--wrapper {
+		flex-direction: column;
+		flex-wrap: wrap;
+		height: 500px;
+	}
+	.project__img--wrapper {
+		order: -1;
+		width: 45%;
+		margin-bottom: 300px;
+	}
+	.project__cite--wrapper:nth-of-type(2n) .project__img--wrapper{
+		order: 4;
+	}
+	.project__info {
+		width: 45%;
+	}
+	.project__cite--title {
+		width: 45%;
+		align-self: flex-start;
+	}
+	.project__technology {
+		width: 45%;
+	}
+	.project__link-cite {
+		align-self: flex-start;
+	}
+}
