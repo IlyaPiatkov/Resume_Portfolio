@@ -401,7 +401,7 @@
 	font-weight: bold;
 }
 .main-nav__item a {
-	display: block;	
+	display: inline-block;	
 	padding: 22px 9%;
 	border-bottom: 1px solid #282835;
 	text-decoration: none;
@@ -418,6 +418,7 @@
 	}
 }
 .main-nav__list a {
+	display: block;
 	text-decoration: none;
 	color: $color-light;
 }
@@ -481,9 +482,6 @@
 		order: 0;
 		background: none;
 	}
-	.main-nav__wrapper {
-
-	}
 	.main-nav__list {
 		display: flex;
 		justify-content: center;
@@ -494,38 +492,44 @@
 		font-weight: normal;
 		text-align: center;
 	}
-	.main-nav__item {
-		
-	}
 	.main-nav__list li:first-child a {
 		border: none;
 	}
-	.main-nav--closed .main-nav__toggle{
+	.main-nav--closed .hamburglar{
 		margin-top: -20px;
 		left: 0;
 		top: 0;
 		background: none;
+		animation: none;
 	}
 	.main-nav--closed .main-nav__item {
 		&--active {
 			display: none;
 		}
 	}
+	.main-nav--closed-animation .main-nav__item {
+		display: block;
+		animation: main-nav-up 3s;
+		animation-fill-mode: forwards;
+		&--active {
+			display: none;
+		}
+	}
+	@keyframes main-nav-up {
+		to {
+			transform: translateY(-100px);
+		}
+	}
 	.main-nav--opened .main-nav__wrapper {
+		position: static;
 		background: none;
-
+		animation: none;
 	}
 	.main-nav--opened .main-nav__item {
 		margin-top: -20px;
 		&--active {
 			display: none;
 		}
-	}
-	.main-nav--opened .main-nav__toggle {
-		margin-top: -20px;
-		background: none;
-	}
-	.main-nav--opened .main-nav__item {
 		&:nth-child(2n) a {
 			animation-name: main-nav_translateY2;
 			animation-duration: 2s;
@@ -536,5 +540,10 @@
 			animation-duration: 1.8s;
 			animation-timing-function: ease-out;
 		}
+	}
+	.main-nav--opened .hamburglar {
+		margin-top: -20px;
+		background: none;
+		animation: none;
 	}
 }

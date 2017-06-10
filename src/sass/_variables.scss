@@ -4,7 +4,7 @@ $desktop-widths: (min-width: 1225px);
 
 $background-page: #353541;
 $color-light: #ffffff;
-$color-time: #914b57; 
+$color-text-footer: #ffffff;
 $background-main-menu: #1d1d24; 
 $background-main-nav__toggle: #1d1d39; 
 $background-main-nav__toggle-hover: #1d1d30; 
@@ -18,7 +18,11 @@ $background-skills: #1d1d24;
 $background-indicator: #fb6470;
 $background-indicator-line: #bcbcbe;
 
-$title-size: 32px; 
+$title-size: 32px; // 
+$title-size-tab: 50px; // Заголовок Н1 для планшета
+$title-size-des: 70px; // Заголовок Н1 для декстопа
+$title-span-size-tab: 30px; // Заголовок span для планшета
+$title-span-size-des: 40px; // Заголовок span для декстопа
 $block-info-li: 16px;
 $skate-size-h3: 16px;
 $skate-size-time: 16px;

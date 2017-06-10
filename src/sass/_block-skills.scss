@@ -9,7 +9,7 @@
 }
 .block-skills__wrapper {
 	@include container-fluid;
-	padding: 50px 10px;
+	padding: $padding-top-block $padding-l-r-block;
 }
 .skillbar--position {
 	margin: 40px 3% 0 3%;

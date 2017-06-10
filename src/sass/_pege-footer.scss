@@ -1,5 +1,5 @@
 .pege-footer {
-
+	background: $background-page;
 }
 .footer-wrapper {
 	@include container-fluid;
@@ -7,13 +7,14 @@
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	padding: 50px 10px 20px;
+	padding: $padding-top-block $padding-l-r-block 20px;
 }
 .pege-footer h2 {
 	@include line-decoration;
 	position: relative;
 	display: inline-block;
 	width: 100%;
+	color: $color-text-footer;
 }
 .pege-footer__info {
 	max-width: 450px;
@@ -32,9 +33,11 @@
 .pege-footer__items h3 {
 	margin: 20px 0 10px;
 	font-size: $footer-title;
+	color: $color-text-footer;
 }
 .pege-footer__items span {
 	font-size: $footer-span;
+	color: $color-text-footer;
 }
 .pege-footer__items::before {
 	content: "";
