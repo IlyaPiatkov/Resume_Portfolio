@@ -1,4 +1,5 @@
 .pege-footer {
+	margin-top: 30px;
 	background: $background-page;
 }
 .footer-wrapper {
@@ -17,7 +18,6 @@
 	color: $color-text-footer;
 }
 .pege-footer__info {
-	max-width: 450px;
 	margin: 30px auto;
 	padding: 0 30px;
 }
@@ -29,6 +29,7 @@
 .pege-footer__items {
 	position: relative;
 	margin-left: 50px;
+	display: inline-block;
 }
 .pege-footer__items h3 {
 	margin: 20px 0 10px;
@@ -38,28 +39,6 @@
 .pege-footer__items span {
 	font-size: $footer-span;
 	color: $color-text-footer;
-}
-.pege-footer__items::before {
-	content: "";
-	position: absolute;
-	left: -50px;
-	top: 5px;
-	background: url("/../img/sprites.png") no-repeat;
-}
-.pege-footer__items--position-home::before {
-	background-position: 0 -35px ;
-	width: 32px;
-	height: 32px;
-}
-.pege-footer__items--position-email::before {
-	background-position: -36px 0;
-	width: 32px;
-	height: 32px;	
-}
-.pege-footer__items--position-phone::before {
-	background-position: 0 0;
-	width: 32px;
-	height: 32px;
 }
 .pege-footer__copyright {
 	display: flex;
